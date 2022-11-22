@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { DarkTheme, TodoList } from './components/context';
 import './App.css';
+import Todo from './components/todo-list/Todo';
+import Header from './components/header/Header';
+
+
 
 function App() {
+  const {dark} = DarkTheme();
+  const { todoList } =TodoList()
+  
+  const screenHeightStyle = {
+  height:todoList.length > 4?"100%":"100vh"
+}
+console.log(todoList.length)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className={dark?"applight":"App"}  style={screenHeightStyle}>  
+      <Header/>
+      <Todo/>
+      </div>
+    
   );
 }
 

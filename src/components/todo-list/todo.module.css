@@ -1,0 +1,40 @@
+.todo{
+      margin: 2rem auto 0 auto;
+      width: 90%;
+      border-radius: 20px;
+}
+
+.todoContainer{
+     margin: auto;
+     padding: .75rem;
+    width: 80%;
+    height: 100%;
+    transition: all .45s;
+    border-radius: 15px;
+}
+.light{
+    background: linear-gradient(40deg,rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+}
+.dark{
+    background: linear-gradient(40deg,rgba(0,0,0,0.8),rgba(0,0,0,0.3));
+}
+.todoList{
+    margin: auto;
+    transition: all .45s;
+    padding: .75rem;
+    overflow: hidden;
+}
+.error{
+    color: red;
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 1024px){
+    .todo{
+        width: 95%;
+  }
+  
+  .todoContainer{
+      width: 95%;
+    
+  }
+  }

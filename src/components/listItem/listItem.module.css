@@ -1,0 +1,52 @@
+.listItem{
+    margin: 1rem auto;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    transition: all.3s;
+    display: flex;
+    justify-content: space-between;;
+
+}
+.listItem button{
+    border :none;
+    background: inherit;
+    margin: auto 1rem;
+    font-size: 1.5rem;
+     cursor: pointer;
+}
+.buttons{
+    margin: auto 0;
+   
+}
+
+.dark{
+    background-color: #9c9393;
+    color: white;
+}
+.light{
+    background-color: #9595e3;
+    color: black;
+}
+.done{
+    color: green;
+}
+.delete{
+    color: red;
+}
+@media only screen and (max-width: 1024px){
+    .listItem{
+        font-size: 1rem;
+        padding: .5rem;
+        width: 95%;
+    }
+    .listItem button{
+        font-size: 1rem;
+        margin: 0;
+    }
+    .buttons{
+        margin: auto 0 ;
+       
+    }
+  }
