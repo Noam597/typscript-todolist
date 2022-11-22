@@ -8,7 +8,7 @@ const Footer :React.FC= () => {
     <div className={styles.footer}>
      <div>
         <a href='https://linkedin.com/in/noam-harris'  rel="noreferrer" target="_blank"><AiFillLinkedin/></a>
-        <a href="https://github.com/Noam597/" rel="noreferrer" target="_blank"><AiFillGithub/></a>
+        <a href="https://github.com/Noam597/typscript-todolist" rel="noreferrer" target="_blank"><AiFillGithub/></a>
      </div>
     </div>
   )
