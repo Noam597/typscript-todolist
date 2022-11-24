@@ -8,10 +8,7 @@ import Header from './components/header/Header';
 
 function App() {
   const {dark} = DarkTheme();
-  const { todoList } =TodoList()
-  
 
-console.log(todoList.length)
   return (
     <div className={dark?"applight":"App"}  >  
       <Header/>
