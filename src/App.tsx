@@ -1,5 +1,5 @@
 
-import { DarkTheme, TodoList } from './components/context';
+import { DarkTheme } from './components/context';
 import './App.css';
 import Todo from './components/todo-list/Todo';
 import Header from './components/header/Header';

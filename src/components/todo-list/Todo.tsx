@@ -20,6 +20,8 @@ const Todo:FC = () => {
           const savedItems = JSON.parse(localStorage.getItem("todos")!)
           if(savedItems){
               setTodoList(savedItems)
+                      }else{
+                        setTodoList([])
                       }
   },[setTodoList]);
 

@@ -18,7 +18,7 @@ interface TodoListScreenProps {
 
 const DarkThemeContext = createContext({} as ContextProps)
 
-const ListLengthContext = createContext({} as TodoListScreenProps) 
+const ListLengthContext = createContext({} as TodoListScreenProps ) 
 
 export const TodoThemeContext = ({children}:DarkThemeProps) => {
 

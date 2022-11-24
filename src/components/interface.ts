@@ -3,7 +3,7 @@ import React,{FormEvent} from "react"
 
 export interface Tasks  {
     id:number,
-    newTask:string
+    newTask:string 
     isDone:boolean
 };
 
