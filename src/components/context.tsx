@@ -24,7 +24,7 @@ export const TodoThemeContext = ({children}:DarkThemeProps) => {
 
     const [dark, setDark] = useState<boolean>(false)
 
-    const [todoList, setTodoList] = useState<Tasks[]>(JSON.parse(localStorage.getItem("todos")!));
+    const [todoList, setTodoList] = useState<Tasks[]>([]);
    
   return (
     <DarkThemeContext.Provider value={{dark,setDark}}>
