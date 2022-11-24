@@ -1,12 +1,12 @@
 .App {
   text-align: center;
   background: linear-gradient(to right, #373535,#787575,#373535);
-  height: 100vh;
+  min-height: 100vh;
 }
 .applight{
   text-align: center;
   background: linear-gradient(to right, #4c64ba,#add8e6,#4c64ba);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 438px){
