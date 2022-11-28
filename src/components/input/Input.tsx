@@ -16,7 +16,10 @@ const InputTask:FC<InputProps> = ({todo,setTodo,addTask}) => {
           value={todo}
            onChange={(e)=>setTodo(e.target.value)}
            placeholder="Add New Task.."/>
-        <button className={`${styles.button} `+ (dark ?`${styles.btn_light}`:`${styles.btn_dark}`)} onClick={addTask} type='submit'>ADD TASK</button>
+        <button 
+        className={`${styles.button} `+ (dark ?`${styles.btn_light}`:`${styles.btn_dark}`)} 
+        onClick={addTask} 
+        type='submit'>ADD TASK</button>
     </form>
     </>
   )

@@ -4,7 +4,7 @@ import InputTask from '../input/Input';
 import ListItem from '../listItem/ListItem';
 import styles from './todo.module.css';
 
-
+const LOCAL_STORAGE = "todos"
 
 const Todo:FC = () => {
 
@@ -16,34 +16,42 @@ const Todo:FC = () => {
     
     const {todoList, setTodoList} = TodoList()
     
+
+
     const savedToDoItems = useCallback(()=>{
-          const savedItems = JSON.parse(localStorage.getItem("todos")!)
+          const savedItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE)!)
           if(savedItems){
               setTodoList(savedItems)
-                      }else{
+                      }
+                      else{
                         setTodoList([])
                       }
   },[setTodoList]);
 
+
   useEffect(() => { 
     savedToDoItems()
     }
+    
   , [savedToDoItems]);
   
 
     const addTask = (e:FormEvent) =>{
       e.preventDefault()
       if(!task){
-        setError("Please fill in task")
-      }else{
-        setTodoList([...todoList,{
+       return   setError("Please fill in task")
+      }
+      else{
+        const newList = {
           id:Date.now(),
           newTask:task,
-          isDone:false}])
-            localStorage.setItem("todos",JSON.stringify(todoList))
-          setTask("")
+          isDone:false}
+        setTodoList([...todoList,newList])
+           localStorage.setItem(LOCAL_STORAGE,JSON.stringify([...todoList,newList]))
+       setTask("")
         setError("")
       }
+     
       
     }
     
