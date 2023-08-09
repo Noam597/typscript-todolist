@@ -1,5 +1,6 @@
 import {FormEvent,FC,useState,useEffect, useCallback} from 'react';
-import { DarkTheme, TodoList } from '../context';
+import { DarkTheme} from '../context';
+import { Tasks } from '../interface';
 import InputTask from '../input/Input';
 import ListItem from '../listItem/ListItem';
 import styles from './todo.module.css';
@@ -14,8 +15,7 @@ const Todo:FC = () => {
     
     const { dark } = DarkTheme()
     
-    const {todoList, setTodoList} = TodoList()
-    
+    const [todoList, setTodoList] = useState<Tasks[]>([]);
 
 
     const savedToDoItems = useCallback(()=>{
@@ -66,8 +66,8 @@ const Todo:FC = () => {
         {error && <p className={styles.error}>{error}</p>}
       <div className={styles.todoList}>
         <div>
-          {todoList.map((list)=>{
-            return <div key={list.id}>
+          {todoList?.map((list,i)=>{
+            return <div key={list.id} data-testid="task id">
                       <ListItem item={list} todos={todoList} setTodos={setTodoList}/>
                   </div>
           })}

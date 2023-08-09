@@ -21,6 +21,9 @@ const Header:React.FC = () => {
     const switchDarkTheme = ()=>{
         setDark(!dark)
     }
+
+
+    
   return (
     <div className={`${styles.header} ` + (dark?`${styles.light}`:`${styles.dark}`)}>
         <h1>{clock}</h1>
