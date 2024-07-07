@@ -1,0 +1,9 @@
+version: '26.1.1'
+services:
+  mytodos:
+    build: ./
+    container_name: mytodos_c
+    ports:
+      - '3000:3000'
+    stdin_open: true 
+    tty: true 
